@@ -160,3 +160,10 @@ describe('converting Arabic numbers 100 to 999 to English', () => {
     })
   })
 })
+describe('converting Arablic numbers 1000 to 999,999', () => {
+  describe('converting Arabic numbers 1000 to 9999', () => {
+    it('should convert 1000 to "one thousand"', () => {
+      expect(arabicToEnglish(1000)).to.equal('one thousand')
+    })
+  })
+})
