@@ -168,8 +168,28 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
     it('should convert 1001 to "one thousand and one"', () => {
       expect(arabicToEnglish(1001)).to.equal('one thousand and one')
     })
+    it('should convert 2022 to two thousand and twenty two', () => {
+      expect(arabicToEnglish(2022)).to.equal('two thousand and twenty two')
+    })
+    it('should convert 3333 to three thousand three hundred and thirty three', () => {
+      expect(arabicToEnglish(3333)).to.equal('three thousand three hundred and thirty three')
+    })
+    it('should convert 9999 to "nine thousand nine hundred and ninety nine"', () => {
+      expect(arabicToEnglish(9999)).to.equal('nine thousand nine hundred and ninety nine')
+    })
   })
-  it('should convert 3333 to three thousand three hundred and thirty three', () => {
-    expect(arabicToEnglish(3333)).to.equal('three thousand three hundred and thirty three')
+  describe('converting Arabic numbers 10000 to 99,000', () => {
+    it('should convert 10,000 to "ten thousand"', () => {
+      expect(arabicToEnglish(10000)).to.equal('ten thousand')
+    })
+    it('should convert 20,001 to "twenty thousand and one"', () => {
+      expect(arabicToEnglish(20001)).to.equal('twenty thousand and one')
+    })
+    it('should convert 55,500 to fifty five thousand five hundred', () => {
+      expect(arabicToEnglish(55500)).to.equal('fifty five thousand five hundred')
+    })
+    it('should convert 99,999 to "ninety nine thousand nine hundred and ninety nine"', () => {
+      expect(arabicToEnglish(99999)).to.equal('ninety nine thousand nine hundred and ninety nine')
+    })
   })
 })

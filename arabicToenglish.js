@@ -18,10 +18,13 @@ function arabicToEnglish (num) {
   if (num < 1000000) {
     const thousands = Math.floor(num / 1000) * 1000
     if (num === thousands) {
-      return 'one thousand'
+      return `${arabicToEnglish(thousands / 1000)} thousand`
     } else {
-      const remainder = arabicToEnglish(num - thousands)
-      return `one thousand and ${remainder}`
+      let remainder = arabicToEnglish(num - thousands)
+      if (num - thousands < 100) {
+        remainder = 'and ' + remainder
+      }
+      return `${arabicToEnglish(thousands / 1000)} thousand ${remainder}`
     }
   }
 }
