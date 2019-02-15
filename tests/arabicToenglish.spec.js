@@ -178,7 +178,7 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
       expect(arabicToEnglish(9999)).to.equal('nine thousand nine hundred and ninety nine')
     })
   })
-  describe('converting Arabic numbers 10000 to 99,000', () => {
+  describe('converting Arabic numbers 10,000 to 99,000', () => {
     it('should convert 10,000 to "ten thousand"', () => {
       expect(arabicToEnglish(10000)).to.equal('ten thousand')
     })
@@ -190,6 +190,17 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
     })
     it('should convert 99,999 to "ninety nine thousand nine hundred and ninety nine"', () => {
       expect(arabicToEnglish(99999)).to.equal('ninety nine thousand nine hundred and ninety nine')
+    })
+  })
+  describe('converting Arabic numbers 100,000 to 999,999', () => {
+    it('should convert 100,000 to "one hundred thousand"', () => {
+      expect(arabicToEnglish(100000)).to.equal('one hundred thousand')
+    })
+    it('should convert 404,000 to four hundred and four thousand', () => {
+      expect(arabicToEnglish(404000)).to.equal('four hundred and four thousand')
+    })
+    it('should convert 999,999 to "nine hundred and ninety nine thousand nine hundred and ninety nine"', () => {
+      expect(arabicToEnglish(999999)).to.equal('nine hundred and ninety nine thousand nine hundred and ninety nine')
     })
   })
 })
