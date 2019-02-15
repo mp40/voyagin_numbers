@@ -9,7 +9,17 @@ function arabic2english (num) {
     'six',
     'seven',
     'eight',
-    'nine'
+    'nine',
+    'ten',
+    'eleven',
+    'twelve',
+    'thirteen',
+    'fourteen',
+    'fifteen',
+    'sixteen',
+    'seventeen',
+    'eighteen',
+    'nineteen'
   ]
   return numWords[num]
 }

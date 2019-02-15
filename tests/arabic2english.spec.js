@@ -47,4 +47,31 @@ describe('converting Arabic 10-19 to English ', () => {
   it('should convert 10 to "ten"', () => {
     expect(arabic2english(10)).to.equal('ten')
   })
+  it('should convert 11 to "eleven"', () => {
+    expect(arabic2english(11)).to.equal('eleven')
+  })
+  it('should convert 12 to "twelve"', () => {
+    expect(arabic2english(12)).to.equal('twelve')
+  })
+  it('should convert 13 to "thirteen"', () => {
+    expect(arabic2english(13)).to.equal('thirteen')
+  })
+  it('should convert 14 to "fourteen"', () => {
+    expect(arabic2english(14)).to.equal('fourteen')
+  })
+  it('should convert 15 to "fifteen"', () => {
+    expect(arabic2english(15)).to.equal('fifteen')
+  })
+  it('should convert 16 to "sixteen"', () => {
+    expect(arabic2english(16)).to.equal('sixteen')
+  })
+  it('should convert 17 to "seventeen"', () => {
+    expect(arabic2english(17)).to.equal('seventeen')
+  })
+  it('should convert 18 to "eighteen"', () => {
+    expect(arabic2english(18)).to.equal('eighteen')
+  })
+  it('should convert 19 to "nineteen"', () => {
+    expect(arabic2english(19)).to.equal('nineteen')
+  })
 })
