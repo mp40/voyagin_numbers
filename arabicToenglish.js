@@ -15,6 +15,9 @@ function arabicToEnglish (num) {
       return `${oneToNineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
+  if (num < 1000000) {
+    return 'one thousand'
+  }
 }
 function twentyToNinety (num) {
   const decadeWords = [
