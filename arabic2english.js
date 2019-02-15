@@ -1,9 +1,16 @@
+#!/usr/bin/env node
+
 function arabicToEnglish (num) {
+  const oneMillion = 1000000
+  if (num === undefined || num >= oneMillion || num <= -oneMillion || !Number.isInteger(num)) {
+    return 'Error, please enter valid number'
+  }
   let result = convertToEnglish(Math.abs(num))
   return num > -1 ? result : `negative ${result}`
 }
 
 function convertToEnglish (num) {
+  const oneMillion = 1000000
   if (num < 20) {
     return oneToNineteen(num)
   }
@@ -20,7 +27,7 @@ function convertToEnglish (num) {
       return `${oneToNineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
-  if (num < 1000000) {
+  if (num < oneMillion) {
     const thousands = Math.floor(num / 1000) * 1000
     if (num === thousands) {
       return `${convertToEnglish(thousands / 1000)} thousand`
@@ -72,6 +79,9 @@ function oneToNineteen (num) {
   ]
   return numWords[num]
 }
+
+const input = process.argv[2]
+console.log(arabicToEnglish(input))
 
 module.exports = {
   arabicToEnglish

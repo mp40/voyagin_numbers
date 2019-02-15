@@ -212,3 +212,17 @@ describe('converting negative numbers', () => {
     expect(arabicToEnglish(-999999)).to.equal('negative nine hundred and ninety nine thousand nine hundred and ninety nine')
   })
 })
+describe('checking for valid parameters', () => {
+  const errorMessage = 'Error, please enter valid number'
+  it('should return error message if parameter is undefined', () => {
+    expect(arabicToEnglish()).to.equal(errorMessage)
+  })
+  it('should reurn error message if number exceeds constraints', () => {
+    const oneMillion = 1000000
+    expect(arabicToEnglish(oneMillion)).to.equal(errorMessage)
+    expect(arabicToEnglish(-oneMillion)).to.equal(errorMessage)
+  })
+  it('should return error if parameter is not whole number', () => {
+    expect(arabicToEnglish(7.62)).to.equal(errorMessage)
+  })
+})
