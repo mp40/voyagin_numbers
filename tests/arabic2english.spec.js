@@ -129,7 +129,13 @@ describe('converting Arabic numbers 100 to 999 to English', () => {
   it('should convert 100 to "one hundred"', () => {
     expect(arabic2english(100)).to.equal('one hundred')
   })
+  it('should convert 101 to one hundred and one', () => {
+    expect(arabic2english(101)).to.equal('one hundred and one')
+  })
   it('should convert 111 to "one hundred and eleven"', () => {
     expect(arabic2english(111)).to.equal('one hundred and eleven')
+  })
+  it('should convert 199 to "one hundred and ninety nine"', () => {
+    expect(arabic2english(199)).to.equal('one hundred and ninety nine')
   })
 })
