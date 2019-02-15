@@ -1,7 +1,7 @@
 {
   "name": "voyagin_numbers",
   "version": "1.0.0",
-  "main": "arabic2english.js",
+  "main": "arabicToenglish.js",
   "repository": "https://github.com/mp40/voyagin_numbers.git",
   "author": "mp40 <philps.matthew@gmail.com>",
   "license": "MIT",

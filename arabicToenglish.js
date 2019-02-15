@@ -1,22 +1,22 @@
-function arabic2english (num) {
+function arabicToenglish (num) {
   if (num < 20) {
-    return one2nineteen(num)
+    return oneTonineteen(num)
   }
   if (num < 100) {
     const decade = Math.floor(num / 10) * 10
-    return num - decade > 0 ? `${twenty2ninety(decade)} ${one2nineteen(num - decade)}` : `${twenty2ninety(decade)}`
+    return num - decade > 0 ? `${twentyToninety(decade)} ${oneTonineteen(num - decade)}` : `${twentyToninety(decade)}`
   }
   if (num < 1000) {
     const hundreds = Math.floor(num / 100) * 100
     if (num === hundreds) {
-      return `${one2nineteen(hundreds / 100)} hundred`
+      return `${oneTonineteen(hundreds / 100)} hundred`
     } else {
-      let remainder = arabic2english(num - hundreds)
-      return `${one2nineteen(hundreds / 100)} hundred and ${remainder}`
+      let remainder = arabicToenglish(num - hundreds)
+      return `${oneTonineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
 }
-function twenty2ninety (num) {
+function twentyToninety (num) {
   const decadeWords = [
     'twenty',
     'thirty',
@@ -30,7 +30,7 @@ function twenty2ninety (num) {
   return decadeWords[num / 10 - 2]
 }
 
-function one2nineteen (num) {
+function oneTonineteen (num) {
   const numWords = [
     'zero',
     'one',
@@ -57,5 +57,5 @@ function one2nineteen (num) {
 }
 
 module.exports = {
-  arabic2english
+  arabicToenglish
 }
