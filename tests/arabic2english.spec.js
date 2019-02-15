@@ -21,4 +21,7 @@ describe('converting single arabic numbers to english', () => {
   it('should convert 3 to "three"', () => {
     expect(arabic2english(3)).to.equal('three')
   })
+  it('should convert 4 to "four"', () => {
+    expect(arabic2english(4).to.equal('four'))
+  })
 })

@@ -1,5 +1,11 @@
 function arabic2english (num) {
-  return num === 1 ? 'one' : 'two'
+  if (num === 1) {
+    return 'one'
+  } else if (num === 2) {
+    return 'two'
+  } else {
+    return 'three'
+  }
 }
 
 module.exports = {
