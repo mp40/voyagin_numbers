@@ -1,4 +1,11 @@
 function arabic2english (num) {
+  if (num < 20) {
+    return one2nineteen(num)
+  }
+  return num - 20 > 0 ? 'twenty' + ' ' + one2nineteen(num - 20) : 'twenty'
+}
+
+function one2nineteen (num) {
   const numWords = [
     'zero',
     'one',
@@ -21,12 +28,7 @@ function arabic2english (num) {
     'eighteen',
     'nineteen'
   ]
-  if (num < 20) {
-    return numWords[num]
-  } else {
-    let result = num - 20 > 0 ? 'twenty' + ' ' + numWords[num - 20] : 'twenty'
-    return result
-  }
+  return numWords[num]
 }
 
 module.exports = {
