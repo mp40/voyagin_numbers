@@ -21,7 +21,11 @@ function arabic2english (num) {
     'eighteen',
     'nineteen'
   ]
-  return numWords[num]
+  if (num < 20) {
+    return numWords[num]
+  } else {
+    return 'twenty'
+  }
 }
 
 module.exports = {
