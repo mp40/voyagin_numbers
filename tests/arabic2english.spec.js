@@ -82,9 +82,6 @@ describe('converting Arabic 20-29 to English ', () => {
   it('should convert 21 to "twenty one"', () => {
     expect(arabic2english(21)).to.equal('twenty one')
   })
-  it('should convert 25 to "twenty five"', () => {
-    expect(arabic2english(25)).to.equal('twenty five')
-  })
   it('should convert 28 to "twenty eight"', () => {
     expect(arabic2english(20)).to.equal('twenty')
   })
@@ -96,12 +93,6 @@ describe('converting Arabic 30-39 to English', () => {
   it('should convert 30 to "thirty"', () => {
     expect(arabic2english(30)).to.equal('thirty')
   })
-  it('should convert 31 to "thirty one"', () => {
-    expect(arabic2english(31)).to.equal('thirty one')
-  })
-  it('should convert 35 to "thirty five"', () => {
-    expect(arabic2english(35)).to.equal('thirty five')
-  })
   it('should convert 39 to "thirty nine"', () => {
     expect(arabic2english(39)).to.equal('thirty nine')
   })
@@ -110,22 +101,14 @@ describe('converting Arabic 40-49 to English', () => {
   it('should convert 40 to "forty"', () => {
     expect(arabic2english(40)).to.equal('forty')
   })
-  it('should convert 41 to forty one', () => {
-    expect(arabic2english(41)).to.equal('forty one')
-  })
   it('should convert 49 to "forty nine"', () => {
     expect(arabic2english(49)).to.equal('forty nine')
   })
 })
-describe('converting Arabic 50-59 to English', () => {
+describe('converting Arabic 50-99 to English', () => {
   it('should convert 50 to "fifty"', () => {
     expect(arabic2english(50)).to.equal('fifty')
   })
-  it('should convert 59 to "fifty nine"', () => {
-    expect(arabic2english(59)).to.equal('fifty nine')
-  })
-})
-describe('converting Arabic 60-99 to English', () => {
   it('should convert 60 to "sixty"', () => {
     expect(arabic2english(60)).to.equal('sixty')
   })
@@ -140,5 +123,10 @@ describe('converting Arabic 60-99 to English', () => {
   })
   it('should convert 99 to "ninety nine"', () => {
     expect(arabic2english(99)).to.equal('ninety nine')
+  })
+})
+describe('converting Arabic numbers 100 to 999 to English', () => {
+  it('should convert 100 to "one hundred"', () => {
+    expect(arabic2english(100)).to.equal('one hundred')
   })
 })
