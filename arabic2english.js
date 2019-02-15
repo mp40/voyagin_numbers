@@ -11,7 +11,11 @@ function twentyUpwards (num) {
     'twenty',
     'thirty',
     'forty',
-    'fifty'
+    'fifty',
+    'sixty',
+    'seventy',
+    'eighty',
+    'ninety'
   ]
   return decadeWords[num / 10 - 2]
 }

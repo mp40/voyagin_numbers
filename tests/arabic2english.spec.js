@@ -125,3 +125,20 @@ describe('converting Arabic 50-59 to English', () => {
     expect(arabic2english(59)).to.equal('fifty nine')
   })
 })
+describe('converting Arabic 60-99 to English', () => {
+  it('should convert 60 to "sixty"', () => {
+    expect(arabic2english(60)).to.equal('sixty')
+  })
+  it('should convert 70 to "seventy"', () => {
+    expect(arabic2english(70)).to.equal('seventy')
+  })
+  it('should convert 80 to "eighty"', () => {
+    expect(arabic2english(80)).to.equal('eighty')
+  })
+  it('should convert 90 to "ninety"', () => {
+    expect(arabic2english(90)).to.equal('ninety')
+  })
+  it('should convert 99 to "ninety nine"', () => {
+    expect(arabic2english(99)).to.equal('ninety nine')
+  })
+})
