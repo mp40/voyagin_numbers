@@ -151,4 +151,12 @@ describe('converting Arabic numbers 100 to 999 to English', () => {
       expect(arabic2english(222)).to.equal('two hundred and twenty two')
     })
   })
+  describe('converting 900 to 999', () => {
+    it('should convert 900 to "nine hundred"', () => {
+      expect(arabic2english(900)).to.equal('nine hundred')
+    })
+    it('should convert 999 to "nine hundred and ninety nine"', () => {
+      expect(arabic2english(999)).to.equal('nine hundred and ninety nine')
+    })
+  })
 })
