@@ -92,3 +92,8 @@ describe('converting Arabic 20-29 to English ', () => {
     expect(arabic2english(21)).to.equal('twenty one')
   })
 })
+describe('converting Arabic 30-31 to English', () => {
+  it('should convert 30 to "thirty"', () => {
+    expect(arabic2english(30)).to.equal('thirty')
+  })
+})
