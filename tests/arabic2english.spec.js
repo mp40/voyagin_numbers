@@ -24,4 +24,19 @@ describe('converting single arabic numbers to english', () => {
   it('should convert 4 to "four"', () => {
     expect(arabic2english(4)).to.equal('four')
   })
+  it('should convert 5 to "five"', () => {
+    expect(arabic2english(5)).to.equal('five')
+  })
+  it('should convert 6 to "six"', () => {
+    expect(arabic2english(6)).to.equal('six')
+  })
+  it('should convert 7 to "seven"', () => {
+    expect(arabic2english(7)).to.equal('seven')
+  })
+  it('should convert 8 to "eight"', () => {
+    expect(arabic2english(8)).to.equal('eight')
+  })
+  it('should convert 9 to "nine"', () => {
+    expect(arabic2english(9)).to.equal('nine')
+  })
 })
