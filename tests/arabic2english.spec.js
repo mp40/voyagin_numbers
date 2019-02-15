@@ -79,4 +79,7 @@ describe('converting Arabic 20-29 to English ', () => {
   it('should convert 20 to "twenty"', () => {
     expect(arabic2english(20)).to.equal('twenty')
   })
+  it('should convert 21 to "twenty one"', () => {
+    expect(arabic2english(21)).to.equal('twenty one')
+  })
 })
