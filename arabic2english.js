@@ -3,10 +3,10 @@ function arabic2english (num) {
     return one2nineteen(num)
   }
   const decade = Math.floor(num / 10) * 10
-  return num - decade > 0 ? `${twentyUpwards(decade)} ${one2nineteen(num - decade)}` : `${twentyUpwards(decade)}`
+  return num - decade > 0 ? `${twenty2ninety(decade)} ${one2nineteen(num - decade)}` : `${twenty2ninety(decade)}`
 }
 
-function twentyUpwards (num) {
+function twenty2ninety (num) {
   const decadeWords = [
     'twenty',
     'thirty',
