@@ -6,6 +6,7 @@ function arabic2english (num) {
     const decade = Math.floor(num / 10) * 10
     return num - decade > 0 ? `${twenty2ninety(decade)} ${one2nineteen(num - decade)}` : `${twenty2ninety(decade)}`
   }
+  return 'one hundred'
 }
 
 function twenty2ninety (num) {
