@@ -2,7 +2,9 @@ function arabic2english (num) {
   if (num < 20) {
     return one2nineteen(num)
   }
-  return num - 20 > 0 ? `twenty ${one2nineteen(num - 20)}` : 'twenty'
+  const decadeWords = ['twenty', 'thirty']
+  let decade = decadeWords[Math.floor(num / 10) - 2]
+  return num - Math.floor(num / 10) * 10 > 0 ? `${decade} ${one2nineteen(num - 20)}` : `${decade}`
 }
 
 function one2nineteen (num) {
