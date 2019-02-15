@@ -11,7 +11,7 @@ const {
   arabic2english
 } = require('../arabic2english')
 
-describe('converting single arabic numbers to english', () => {
+describe('converting single Arabic numbers to English', () => {
   it('should convert 1 to "one"', () => {
     expect(arabic2english(1)).to.equal('one')
   })
@@ -41,5 +41,10 @@ describe('converting single arabic numbers to english', () => {
   })
   it('should convert 0 to "zero"', () => {
     expect(arabic2english(0)).to.equal('zero')
+  })
+})
+describe('converting Arabic 10-19 to English ', () => {
+  it('should convert 10 to "ten"', () => {
+    expect(arabic2english(10)).to.equal('ten')
   })
 })
