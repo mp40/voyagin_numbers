@@ -1,5 +1,6 @@
 function arabic2english (num) {
   const numWords = [
+    'zero',
     'one',
     'two',
     'three',
@@ -10,7 +11,7 @@ function arabic2english (num) {
     'eight',
     'nine'
   ]
-  return numWords[num - 1]
+  return numWords[num]
 }
 
 module.exports = {

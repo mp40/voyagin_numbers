@@ -39,4 +39,7 @@ describe('converting single arabic numbers to english', () => {
   it('should convert 9 to "nine"', () => {
     expect(arabic2english(9)).to.equal('nine')
   })
+  it('should convert 0 to "zero"', () => {
+    expect(arabic2english(0)).to.equal('zero')
+  })
 })
