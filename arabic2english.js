@@ -24,7 +24,8 @@ function arabic2english (num) {
   if (num < 20) {
     return numWords[num]
   } else {
-    return 'twenty'
+    let result = num - 20 > 0 ? 'twenty' + ' ' + numWords[num - 20] : 'twenty'
+    return result
   }
 }
 
