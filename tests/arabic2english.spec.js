@@ -92,7 +92,7 @@ describe('converting Arabic 20-29 to English ', () => {
     expect(arabic2english(21)).to.equal('twenty one')
   })
 })
-describe('converting Arabic 30-31 to English', () => {
+describe('converting Arabic 30-39 to English', () => {
   it('should convert 30 to "thirty"', () => {
     expect(arabic2english(30)).to.equal('thirty')
   })
@@ -104,5 +104,16 @@ describe('converting Arabic 30-31 to English', () => {
   })
   it('should convert 39 to "thirty nine"', () => {
     expect(arabic2english(39)).to.equal('thirty nine')
+  })
+})
+describe('converting Arabic 40-49 to English', () => {
+  it('should convert 40 to "forty"', () => {
+    expect(arabic2english(40)).to.equal('forty')
+  })
+  it('should convert 41 to forty one', () => {
+    expect(arabic2english(41)).to.equal('forty one')
+  })
+  it('should convert 49 to "forty nine"', () => {
+    expect(arabic2english(49)).to.equal('forty nine')
   })
 })

@@ -9,7 +9,8 @@ function arabic2english (num) {
 function twentyUpwards (num) {
   const decadeWords = [
     'twenty',
-    'thirty'
+    'thirty',
+    'forty'
   ]
   return decadeWords[num / 10 - 2]
 }
