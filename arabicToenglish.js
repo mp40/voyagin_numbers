@@ -11,12 +11,18 @@ function arabicToEnglish (num) {
     if (num === hundreds) {
       return `${oneToNineteen(hundreds / 100)} hundred`
     } else {
-      let remainder = arabicToEnglish(num - hundreds)
+      const remainder = arabicToEnglish(num - hundreds)
       return `${oneToNineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
   if (num < 1000000) {
-    return 'one thousand'
+    const thousands = Math.floor(num / 1000) * 1000
+    if (num === thousands) {
+      return 'one thousand'
+    } else {
+      const remainder = arabicToEnglish(num - thousands)
+      return `one thousand and ${remainder}`
+    }
   }
 }
 function twentyToNinety (num) {
