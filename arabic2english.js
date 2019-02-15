@@ -2,7 +2,7 @@
 
 function arabicToEnglish (num) {
   const oneMillion = 1000000
-  if (num === undefined || num >= oneMillion || num <= -oneMillion || !Number.isInteger(num)) {
+  if (num >= oneMillion || num <= -oneMillion || !Number.isInteger(num)) {
     return 'Error, please enter valid number'
   }
   let result = convertToEnglish(Math.abs(num))
@@ -40,6 +40,7 @@ function convertToEnglish (num) {
     }
   }
 }
+
 function twentyToNinety (num) {
   const decadeWords = [
     'twenty',
