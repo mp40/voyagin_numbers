@@ -204,3 +204,8 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
     })
   })
 })
+describe('converting negative numbers', () => {
+  it('should convert -1 to "negative one"', () => {
+    expect(arabicToEnglish(-1)).to.equal('negative one')
+  })
+})
