@@ -12,7 +12,7 @@ function arabic2english (num) {
     if (num === hundreds * 100) {
       return str
     } else {
-      let temp = arabic2english(num - 100)
+      let temp = arabic2english(num - hundreds * 100)
       return `${str} and ${temp}`
     }
   }
