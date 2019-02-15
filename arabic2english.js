@@ -1,5 +1,5 @@
 function arabic2english () {
-  
+  return 'one'
 }
 
 module.exports = {
