@@ -169,4 +169,7 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
       expect(arabicToEnglish(1001)).to.equal('one thousand and one')
     })
   })
+  it('should convert 3333 to three thousand three hundred and thirty three', () => {
+    expect(arabicToEnglish(3333)).to.equal('three thousand three hundred and thirty three')
+  })
 })
