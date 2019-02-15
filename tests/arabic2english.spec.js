@@ -117,3 +117,8 @@ describe('converting Arabic 40-49 to English', () => {
     expect(arabic2english(49)).to.equal('forty nine')
   })
 })
+describe('converting Arabic 50-59 to English', () => {
+  it('should convert 50 to "fifty"', () => {
+    expect(arabic2english(50)).to.equal('fifty')
+  })
+})
