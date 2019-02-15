@@ -2,7 +2,7 @@
 
 function arabicToEnglish (num) {
   const oneMillion = 1000000
-  if (num >= oneMillion || num <= -oneMillion || !Number.isInteger(num)) {
+  if (num >= oneMillion || num <= -oneMillion || num % 1 !== 0) {
     return 'Error, please enter valid number'
   }
   let result = convertToEnglish(Math.abs(num))
