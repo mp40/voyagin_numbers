@@ -9,7 +9,7 @@ const {
 
 const {
   arabicToEnglish
-} = require('../arabicToEnglish')
+} = require('../arabic2english')
 
 describe('converting single Arabic numbers to English', () => {
   it('should convert 1 to "one"', () => {
@@ -207,5 +207,8 @@ describe('converting Arablic numbers 1000 to 999,999', () => {
 describe('converting negative numbers', () => {
   it('should convert -1 to "negative one"', () => {
     expect(arabicToEnglish(-1)).to.equal('negative one')
+  })
+  it('should convert -999,999 to "negative nine hundred and ninety nine thousand nine hundred and ninety nine"', () => {
+    expect(arabicToEnglish(-999999)).to.equal('negative nine hundred and ninety nine thousand nine hundred and ninety nine')
   })
 })

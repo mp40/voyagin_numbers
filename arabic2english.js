@@ -1,4 +1,9 @@
 function arabicToEnglish (num) {
+  let result = convertToEnglish(Math.abs(num))
+  return num > -1 ? result : `negative ${result}`
+}
+
+function convertToEnglish (num) {
   if (num < 20) {
     return oneToNineteen(num)
   }
@@ -11,20 +16,20 @@ function arabicToEnglish (num) {
     if (num === hundreds) {
       return `${oneToNineteen(hundreds / 100)} hundred`
     } else {
-      const remainder = arabicToEnglish(num - hundreds)
+      const remainder = convertToEnglish(num - hundreds)
       return `${oneToNineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
   if (num < 1000000) {
     const thousands = Math.floor(num / 1000) * 1000
     if (num === thousands) {
-      return `${arabicToEnglish(thousands / 1000)} thousand`
+      return `${convertToEnglish(thousands / 1000)} thousand`
     } else {
-      let remainder = arabicToEnglish(num - thousands)
+      let remainder = convertToEnglish(num - thousands)
       if (num - thousands < 100) {
         remainder = 'and ' + remainder
       }
-      return `${arabicToEnglish(thousands / 1000)} thousand ${remainder}`
+      return `${convertToEnglish(thousands / 1000)} thousand ${remainder}`
     }
   }
 }
