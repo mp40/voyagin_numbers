@@ -7,13 +7,12 @@ function arabic2english (num) {
     return num - decade > 0 ? `${twenty2ninety(decade)} ${one2nineteen(num - decade)}` : `${twenty2ninety(decade)}`
   }
   if (num < 1000) {
-    const hundreds = Math.floor(num / 100)
-    let str = `${one2nineteen(hundreds)} hundred`
-    if (num === hundreds * 100) {
-      return str
+    const hundreds = Math.floor(num / 100) * 100
+    if (num === hundreds) {
+      return `${one2nineteen(hundreds / 100)} hundred`
     } else {
-      let temp = arabic2english(num - hundreds * 100)
-      return `${str} and ${temp}`
+      let remainder = arabic2english(num - hundreds)
+      return `${one2nineteen(hundreds / 100)} hundred and ${remainder}`
     }
   }
 }
