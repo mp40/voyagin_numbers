@@ -1,7 +1,7 @@
-function test () {
-  return 'working'
+function arabic2english () {
+  
 }
 
 module.exports = {
-  test
+  arabic2english
 }

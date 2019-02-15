@@ -8,11 +8,11 @@ const {
 } = require('mocha')
 
 const {
-  test
+  arabic2english
 } = require('../arabic2english')
 
-describe('tests', () => {
-  it('should prove test environment is set up', () => {
-    expect(test()).to.equal('working')
+describe('converting single arabic numbers to english', () => {
+  it('should convert "1" to "one"', () => {
+    expect(arabic2english(1)).to.equal('one')
   })
 })
