@@ -10,7 +10,8 @@ function twentyUpwards (num) {
   const decadeWords = [
     'twenty',
     'thirty',
-    'forty'
+    'forty',
+    'fifty'
   ]
   return decadeWords[num / 10 - 2]
 }
