@@ -15,7 +15,10 @@ describe('converting single arabic numbers to english', () => {
   it('should convert 1 to "one"', () => {
     expect(arabic2english(1)).to.equal('one')
   })
-  it('should convert 2 to "two"',()=>{
-    expect(arabic2english(2).to.equal('two'))
+  it('should convert 2 to "two"', () => {
+    expect(arabic2english(2)).to.equal('two')
+  })
+  it('should convert 3 to "three"', () => {
+    expect(arabic2english(3)).to.equal('three')
   })
 })

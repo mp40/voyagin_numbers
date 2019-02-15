@@ -1,5 +1,5 @@
-function arabic2english () {
-  return 'one'
+function arabic2english (num) {
+  return num === 1 ? 'one' : 'two'
 }
 
 module.exports = {
