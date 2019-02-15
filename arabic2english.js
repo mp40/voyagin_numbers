@@ -2,7 +2,7 @@ function arabic2english (num) {
   if (num < 20) {
     return one2nineteen(num)
   }
-  return num - 20 > 0 ? 'twenty' + ' ' + one2nineteen(num - 20) : 'twenty'
+  return num - 20 > 0 ? `twenty ${one2nineteen(num - 20)}` : 'twenty'
 }
 
 function one2nineteen (num) {
