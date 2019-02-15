@@ -82,4 +82,13 @@ describe('converting Arabic 20-29 to English ', () => {
   it('should convert 21 to "twenty one"', () => {
     expect(arabic2english(21)).to.equal('twenty one')
   })
+  it('should convert 25 to "twenty five"', () => {
+    expect(arabic2english(25)).to.equal('twenty five')
+  })
+  it('should convert 28 to "twenty eight"', () => {
+    expect(arabic2english(20)).to.equal('twenty')
+  })
+  it('should convert 29 to "twenty nine"', () => {
+    expect(arabic2english(21)).to.equal('twenty one')
+  })
 })
